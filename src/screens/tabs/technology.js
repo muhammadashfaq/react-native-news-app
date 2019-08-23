@@ -45,13 +45,13 @@ export default class Technology extends Component {
         })
     };
 
-    render() {
+    render(){
 
         let loadingView = this.state.loading ?
-            <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+            <Container style={{justifyContent: 'center',alignItems: 'center',flex: 1}}>
                 <ActivityIndicator animating={this.state.loading} size={'large'}/>
-                <Text style={{marginTop: 10}}>Loading</Text>
-            </View> :
+                <Text style={{marginTop: 5}}>Loading</Text>
+            </Container> :
             <List dataArray={this.state.data}
                   renderRow={(item) => {
                       return <DataItem data={item} onPress={this.handleViewOnPress}/>
